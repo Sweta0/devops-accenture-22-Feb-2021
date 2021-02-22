@@ -133,3 +133,35 @@
   133  cd devops-accenture-22-Feb-2021/
   134  ls
   135  history > History.txt
+  136  ls
+  137  git add . ; git commit -m "History.txt"; git push 
+  138  ls
+  139  cd 
+  140  ls
+  141  cd myproject/
+  142  ls
+  143  git branch 
+  144  ls
+  145  git checkout master 
+  146  ls
+  147  git merge uat 
+  148  ls
+  149  cat AV.txt 
+  150  cat Master.txt 
+  151  cat UAT.txt 
+  152  git branch 
+  153  git logs 
+  154  git log --oneline 
+  155  git log --oneline | wc -l 
+  156  git log --oneline --graph
+  157  git shortlog
+  158  git shortlog -sne
+  159  git show HEAD 
+  160  git show HEAD~10
+  161  git show HEAD~5
+  162  ls
+  163  cd ..
+  164  ls
+  165  cd devops-accenture-22-Feb-2021/
+  166  ls
+  167  history > History.txt 
