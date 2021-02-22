@@ -165,3 +165,66 @@
   165  cd devops-accenture-22-Feb-2021/
   166  ls
   167  history > History.txt 
+  168  git add . ; git commit -m "History.txt"; git push 
+  169* git log
+  170  git log --oneline --graph
+  171  ls
+  172  cd ..
+  173  ls
+  174  rm -rf devops-accenture-22-Feb-2021 myproject
+  175  ls
+  176  git clone https://github.com/amitvashisttech/devops-accenture-22-Feb-2021.git
+  177  ls
+  178  cd devops-accenture-22-Feb-2021/
+  179  ls
+  180  git branch 
+  181  git config --list 
+  182  ls
+  183  git log 
+  184  ls
+  185  git branch uat
+  186  ls
+  187  git branch 
+  188  git checkout uat
+  189  ls
+  190  echo "Welcome to UAT Branch" > UAT.txt
+  191  ls
+  192  git add . ; git commit -m "New file UAT.txt"
+  193  git logs 
+  194  git status 
+  195  lsl
+  196  git checkout main 
+  197  ls
+  198  cat README.md 
+  199  ls
+  200  git fetch
+  201  git config --list 
+  202  git log 
+  203  git pull 
+  204  git branch 
+  205  git log 
+  206  ls
+  207  git pull 
+  208  ls
+  209  cat vagrant.txt 
+  210  cat README.md 
+  211  git checkout uat
+  212  ls
+  213  git status 
+  214  git config --list 
+  215  git push 
+  216  git push --set-upstream origin uat
+  217  git config credential.helper store
+  218  cd 
+  219  ls
+  220  ls -a 
+  221  cat .gitconfig 
+  222  cd - 
+  223  ls
+  224  git checkout main 
+  225  ls
+  226  git merge uat
+  227  ls
+  228  git add .; git commit -m "Push the changes"; git push 
+  229  ls
+  230  history > History.txt 
