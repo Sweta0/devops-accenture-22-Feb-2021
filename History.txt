@@ -322,3 +322,15 @@
   322  git push --tags 
   323  ls
   324  history > History.txt
+  325  git add . ; git commit -m "History"; git push 
+  326  git tag 
+  327  git branch 
+  328  git branch -d test
+  329  git branch 
+  330  git tag
+  331  git tag -d hello_release_v2.0
+  332  git tag
+  333  git tag hello_release_v1.0_2021_Feb_23
+  334  git tag -l 
+  335  ls
+  336  history > History.txt 
