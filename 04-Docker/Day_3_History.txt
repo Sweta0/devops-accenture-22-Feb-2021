@@ -69,3 +69,52 @@
    69  cd 04-Docker/
    70  ls
    71  history > Day_3_History.txt
+   72  ls
+   73  cd ..
+   74  ls
+   75  git add . ; git commit -m "04-Docker"; git push 
+   76  history 
+   77  ls
+   78  docker run -it --name test-apache-1 ubuntu:16.04 
+   79  docker ps 
+   80  curl google.com
+   81  curl www.google.com
+   82  docker ps 
+   83  docker inspect test-apache-1
+   84  curl 172.17.0.2
+   85  docker ps 
+   86  docker attach test-apache-1
+   87  curl 172.17.0.2
+   88  curl 172.17.0.2/info.html
+   89  docker ps 
+   90  docker images 
+   91  docker commit -p -m "My First Apache Server" test-apache-1 myapache-ubuntu-16.04:v1
+   92  docker images 
+   93  docker run -itd --name test-apache-2 myapache-ubuntu-16.04:v1 
+   94  docker ps 
+   95  docker inspect test-apache-2
+   96  curl 172.17.0.3
+   97  curl 172.17.0.2
+   98  curl 172.17.0.2/info.html
+   99  curl 172.17.0.3
+  100  docker attach test-apache-1
+  101  ls
+  102  docker commit -p -m "My First Apache Server" test-apache-1 myapache-ubuntu-16.04:v2
+  103  docker images 
+  104  docker run -itd --name test-apache-3 myapache-ubuntu-16.04:v2
+  105  docker ps 
+  106  docker inspect test-apache-3
+  107  curl 172.17.0.4
+  108  curl 172.17.0.4/info.html
+  109  docker images
+  110  ls
+  111  cd 04-Docker/
+  112  ls
+  113  mkdir 01-ContainerCommit
+  114  ls
+  115  cd 01-ContainerCommit/
+  116  ls
+  117  history 
+  118  cd ..
+  119  ls
+  120  history > Day_3_History.txt 
