@@ -118,3 +118,39 @@
   118  cd ..
   119  ls
   120  history > Day_3_History.txt 
+  121  ls
+  122  vim 01-ContainerCommit/README.md
+  123  ls
+  124  cat Day_3_History.txt 
+  125  vim 01-ContainerCommit/README.md
+  126  ls
+  127  cd ..
+  128  ls
+  129  git add . ; git commit -m "04-Docker"; git push 
+  130  ls
+  131  cd 04-Docker/
+  132  ls
+  133  mkdir 02-Dockerfile/apache
+  134  mkdir 02-Dockerfile/apache -p
+  135  ls
+  136  cd 02-Dockerfile/
+  137  ls
+  138  cd apache/
+  139  ls
+  140  vim Dockerfile
+  141  ls
+  142  docker images 
+  143  docker build myapache:v1 . 
+  144  docker build -t myapache:v1 . 
+  145  ld
+  146  docker images 
+  147  docker run -d myapache:v1 
+  148  docker ps 
+  149  curl 172.17.0.5
+  150  ls
+  151  cat Dockerfile 
+  152  cd ..
+  153  ls
+  154  cd ..
+  155  ls
+  156  history >  Day_3_History.txt 
