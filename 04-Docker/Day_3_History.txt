@@ -250,3 +250,102 @@
   250  docker ps 
   251  ls
   252  history > Day_3_History.txt 
+  253  ls
+  254  cd ..
+  255  ls
+  256  git add . ; git commit -m "Docker Expose"; git push 
+  257  ls
+  258  cd 04-Docker/
+  259  ls
+  260  cd 02-Dockerfile/
+  261  ls
+  262  mkdir petclinic 
+  263  ls
+  264  cd petclinic/
+  265  ls
+  266  docker run -it tomcat:8.0 
+  267  ls
+  268  vim Dockerfile
+  269  ls
+  270  cp -rf /root/.jenkins/workspace/Petclinic-Pipeline/03-App-Code/petclinic-code/target/petclinic.war . 
+  271  ls
+  272  docker build -t mydeployment-img:v1 . 
+  273  docker images 
+  274  docker run -d --name test-10 -P mydeployment-img:v1 
+  275  docker ps 
+  276  ls
+  277  > petclinic.war 
+  278  ls
+  279  ls -ltr 
+  280  cd ..
+  281  ls
+  282  cd ../../
+  283  ls
+  284  git add . ; git commit -m "My Deployment"; git push 
+  285  ls
+  286  docker run --name test -d busybox sh -c "while true; do ${echo date};sleep 1;done"
+  287  docker run --name test-2 -d busybox sh -c "while true;do $(echo date);sleep 1;done"
+  288  docker run --name test-log-1 -d busybox sh -c "while true;do $(echo date);sleep 1;done"
+  289  docker ps 
+  290  docker logs test-log-1
+  291  docker logs -f test-log-1
+  292  ls
+  293  docker run --name test-log-2 -d busybox sh -c "while true;do $(echo date) >> index.html ; hostname >> index.html;sleep 1;done"
+  294  docker ps 
+  295  docker logs test-log-2
+  296  docker exec -it test-log-2 -- ls 
+  297  docker exec -it test-log-2  ls 
+  298  docker exec -it test-log-2  cat index.html
+  299  docker exec -it test-log-2  tail -f  index.html
+  300  ls
+  301  docker exec -it test-log-2  tail -f  index.html
+  302  docker ps 
+  303  docker kill  $(docker ps -aq ) 
+  304  docker rm  $(docker ps -aq ) 
+  305  ls
+  306  cd 
+  307  ls
+  308  mkdir mydockervol
+  309  ls
+  310  docker run --name test-log-1 -v /root/mydockervol:/var/www/html/mydockervol -d busybox sh -c "while true;do $(echo date) >> /var/www/html/mydockervol/index.html ; hostname >> /var/www/html/mydockervol/index.html;sleep 5;done"
+  311  docker ps 
+  312  docker inspect test-log-1
+  313  ls
+  314  cd mydockervol/
+  315  ls
+  316  cat index.html 
+  317  tail -f index.html 
+  318  cd 
+  319  ls
+  320  docker run --name test-log-2 -v /root/mydockervol:/var/www/html/mydockervol -d busybox sh -c "while true;do $(echo date) >> /var/www/html/mydockervol/index.html ; hostname >> /var/www/html/mydockervol/index.html;sleep 5;done"
+  321  docker run --name test-log-3 -v /root/mydockervol:/var/www/html/mydockervol -d busybox sh -c "while true;do $(echo date) >> /var/www/html/mydockervol/index.html ; hostname >> /var/www/html/mydockervol/index.html;sleep 5;done"
+  322  ls
+  323  tail -f mydockervol/index.html 
+  324  ls
+  325  docker images 
+  326  docker run --name webserver-1 -v /root/mydockervol:/var/www/html/mydockervol -d -P myapache:v3
+  327  docker ps 
+  328  ls
+  329  > mydockervol/index.html 
+  330  docker run --name test-log-6 -v /root/mydockervol:/var/www/html/mydockervol -d busybox sh -c "while true;do echo "================"; $(echo date) >> /var/www/html/mydockervol/index.html ; hostname >> /var/www/html/mydockervol/index.html;sleep 5;done"
+  331  docker ps 
+  332  docker run --name test-log-7 -v /root/mydockervol:/var/www/html/mydockervol -d busybox sh -c "while true;do echo "================" >> /var/www/html/mydockervol/index.html; $(echo date) >> /var/www/html/mydockervol/index.html ; hostname >> /var/www/html/mydockervol/index.html;sleep 5;done"
+  333  docker ps 
+  334  docker ps | grep -i busybox
+  335  docker ps | grep -i busybox | awk -F " " '{print $1}'
+  336  docker kill $(docker ps | grep -i busybox | awk -F " " '{print $1}')
+  337  docker rm $(docker ps | grep -i busybox | awk -F " " '{print $1}')
+  338  docker rm $(docker ps -a| grep -i busybox | awk -F " " '{print $1}')
+  339  ls
+  340  cd mydockervol/
+  341  ls
+  342  cat index.html 
+  343  ls
+  344  cd ..
+  345  ls
+  346  cd devops-
+  347  cd devops-accenture-22-Feb-2021/
+  348  ls
+  349  cd 04-Docker/
+  350  ls
+  351  history > Day_3_History.txt 
