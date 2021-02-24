@@ -8,4 +8,7 @@ RUN apt-get install apache2 -y
 
 COPY sample.html /var/www/html/info.html
 
+EXPOSE 80
+EXPOSE 3306
+
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

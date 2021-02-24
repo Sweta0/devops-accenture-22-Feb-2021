@@ -154,3 +154,59 @@
   154  cd ..
   155  ls
   156  history >  Day_3_History.txt 
+  157  ls
+  158  cd ..
+  159  ls
+  160  git add . ; git commit -m "04-Docker"; git push 
+  161  ls
+  162  cd 04-Docker/
+  163  ls
+  164  cd 02-Dockerfile/apache/
+  165  ls
+  166  vim Dockerfile 
+  167  ls
+  168  docker build -t myapache:v2 . 
+  169  docker images 
+  170  ls
+  171  vim sample.html
+  172  ls
+  173  docker build -t myapache:v2 . 
+  174  docker images 
+  175  docker run -d myapache:v2
+  176  curl 172.17.0.5
+  177  curl 172.17.0.5/info.html
+  178  curl 172.17.0.6/info.html
+  179  docker ps 
+  180  cd ../../../
+  181  ls
+  182  git add . ; git commit -m "Dockerfile - v2"; git push 
+  183  docker ps 
+  184  ls
+  185  cd - 
+  186  ls
+  187  vim Dockerfile 
+  188  docker build -t myapache:v3 . 
+  189  docker run -d myapache:v3
+  190  docker ps 
+  191  curl 172.17.0.7/info.html
+  192  vim Dockerfile 
+  193  vim sample.html 
+  194  docker build -t myapache:v3 . 
+  195  docker run -d myapache:v3
+  196  docker ps 
+  197  docker inspect 38f990137384
+  198  curl 172.17.0.8
+  199  curl 172.17.0.8/info.html
+  200  ls
+  201  vim Dockerfile 
+  202  ls
+  203  vim sample.html 
+  204  docker build -t myapache:v4 . 
+  205  docker run -d myapache:v4
+  206  docker ps 
+  207  ls
+  208  cd ..
+  209  ls
+  210  cd ..
+  211  ls
+  212  history > Day_3_History.txt 
