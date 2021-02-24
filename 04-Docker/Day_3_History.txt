@@ -210,3 +210,43 @@
   210  cd ..
   211  ls
   212  history > Day_3_History.txt 
+  213  cd ,,
+  214  cd ..
+  215  git add . ; git commit -m "Dockerfile - v4"; git push 
+  216  ls
+  217  cd 04-Docker/
+  218  ls
+  219  cd ls
+  220  ls
+  221  docker ps 
+  222  docker kill $(docker ps -qa ) 
+  223  docker rm  $(docker ps -qa ) 
+  224  ls
+  225  docker images 
+  226  docker run -d --name test-1 myapache:v2
+  227  docker ps 
+  228  docker run -d --name test-2 myapache:v4
+  229  docker ps 
+  230  curl 172.17.0.3/info.html
+  231  ip addr 
+  232  docker os 
+  233  docker ps 
+  234  docker run -d --name test-3 -p 80:80 myapache:v3 
+  235  docker ps 
+  236  netstat -tulnp 
+  237  docker run -d --name test-4 -p 80:80 myapache:v3 
+  238  docker run -d --name test-4 -p 81:80 myapache:v3 
+  239  docker run -d --name test-5 -p 81:80 myapache:v3 
+  240  netstat -tulnp 
+  241  docker ps 
+  242  docker run -d --name test-6 -P  myapache:v2
+  243  docker ps 
+  244  docker run -d --name test-7 -P  myapache:v3
+  245  docker ps 
+  246  netstat -tulnp 
+  247  docker run -d --name test-8 -P  myapache:v4
+  248  docker ps 
+  249  docker run -d --name test-9 -p 8082:80 -p 8083:3306 myapache:v4
+  250  docker ps 
+  251  ls
+  252  history > Day_3_History.txt 
