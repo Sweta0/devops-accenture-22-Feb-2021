@@ -1,0 +1,71 @@
+    1  docker version 
+    2  docker run busybox echo "Welcome to Docker Demo"
+    3  docker run busybox echo "Welcome to Docker Demo 2"
+    4  docker ps 
+    5  docker ps -a
+    6  docker ps  
+    7  docker ps  -a 
+    8  docker container ls 
+    9  docker container ls -a 
+   10  ls
+   11  docker images 
+   12  docker run ubuntu echo "Hey Ubuntu"
+   13  docker images 
+   14  docker pull ubuntu:16.04
+   15  docker images 
+   16  docker pull k8s-tiny-web
+   17  docker pull amitvashist7/k8s-tiny-web
+   18  docker images 
+   19  docker pull amitvashist7/k8s-tiny-web:2
+   20  docker pull amitvashist7/k8s-tiny-web:3
+   21  docker images 
+   22  docker run ubuntu echo "Hello"
+   23  docker ps 
+   24  docker ps -a 
+   25  docker run ubuntu top 
+   26  top 
+   27  docker run -it ubuntu top 
+   28  docker ps 
+   29  docker run -it ubuntu 
+   30  ls
+   31  docker ps 
+   32  docker ps -a 
+   33  docker start 779b3d2cc007
+   34  docker ps 
+   35  docker ps -a 
+   36  docker ps 
+   37  docker attach 779b3d2cc007
+   38  ls
+   39  docker run -it ubuntu:16.04 cat /etc/os-release
+   40  docker ps 
+   41  docker ps -a 
+   42  docker run -it ubuntu
+   43  docker ps 
+   44  docker run -itd ubuntu
+   45  docker ps 
+   46  docker run -itd --name app_A-node-1 ubuntu
+   47  docker run -itd --name app_A-node-2 ubuntu
+   48  docker run -itd --name app_B-node-1 ubuntu
+   49  docker run -itd --name app_B-node-2 ubuntu
+   50  docker run -itd --name app_B-node-3 ubuntu
+   51  docker ps 
+   52  docker stop app_B-node-3
+   53  docker ps 
+   54  docker start app_B-node-3
+   55  docker ps 
+   56  docker run -itd --name app_B-node-3 ubuntu
+   57  docker ps 
+   58  docker kill app_B-node-3
+   59  docker ps 
+   60  docker ps -q
+   61  docker kill $(docker ps -q)
+   62  docker ps 
+   63  docker ps -a
+   64  docker ps -aq
+   65  docker kill $(docker ps -qa)
+   66  docker rm $(docker ps -qa)
+   67  docker ps -a 
+   68  ls
+   69  cd 04-Docker/
+   70  ls
+   71  history > Day_3_History.txt
