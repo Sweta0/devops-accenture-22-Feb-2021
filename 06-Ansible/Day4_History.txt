@@ -1,0 +1,35 @@
+    1  apt-get install ansible -y
+    2  ansible version 
+    3  ansible -version 
+    4  ansible --version 
+    5  ls
+    6  cd 06-Ansible/
+    7  ls
+    8  mkdir 01-Inventory 
+    9  ls
+   10  cd 01-Inventory/
+   11  ls
+   12  vim inventory
+   13  ls
+   14  ping 172.31.0.100
+   15  ping 172.31.0.101
+   16  ping 172.31.0.102
+   17  ansible 172.31.0.100 -i inventory -m ping -u vagrant -k 
+   18  apt-get install sshpass -y 
+   19  ansible 172.31.0.100 -i inventory -m ping -u vagrant -k 
+   20  ssh vagrant@172.31.0.100
+   21  cat /root/.ssh/known_hosts 
+   22  ansible 172.31.0.100 -i inventory -m ping -u vagrant -k 
+   23  vim /etc/ssh/sshd_config 
+   24  ls
+   25  sed -i "s/PasswordAuthentication no/PasswordAuthentication yes/g" /etc/ssh/sshd_config 
+   26  grep "PasswordAuthentication" /etc/ssh/sshd_config
+   27  service sshd restart 
+   28  ansible 172.31.0.100 -i inventory -m ping -u vagrant -k 
+   29  ansible all -i inventory -m ping -u vagrant -k 
+   30  ssh vagrant@172.31.0.101
+   31  ssh vagrant@172.31.0.102
+   32  ansible all -i inventory -m ping -u vagrant -k 
+   33  cd ..
+   34  ls
+   35  history > Day4_History.txt
