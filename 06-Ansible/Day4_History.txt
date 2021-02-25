@@ -33,3 +33,49 @@
    33  cd ..
    34  ls
    35  history > Day4_History.txt
+   36  ls
+   37  cd ..
+   38  ls
+   39  git add . ; git commit -m "06-Ansible"; git push 
+   40  ls
+   41  cd 06-Ansible/01-Inventory/
+   42  ls
+   43  ansible all -i inventory -m ping -u vagrant -k 
+   44  vim inventory 
+   45  ansible all -i inventory -m ping -u vagrant -k 
+   46  ansible web -i inventory -m ping -u vagrant -k 
+   47  ansible ansible -i inventory -m ping -u vagrant -k 
+   48  ls
+   49  vim inventory 
+   50  ansible ansible -i inventory -m ping 
+   51  vim inventory 
+   52  ansible web -i inventory -m ping 
+   53  cat inventory 
+   54  ls
+   55  ansible-doc  -l 
+   56  ansible-doc apt
+   57  ansible 172.31.0.101 -i inventory -m apt -a "name=ntp state=present"
+   58  ansible 172.31.0.101 -i inventory -m apt -a "name=ntp state=present" -s 
+   59  ansible 172.31.0.101 -i inventory -m apt -a "name=ntp state=absent" -s 
+   60  ansible 172.31.0.101 -i inventory -m apt -a "name=ntp state=present" -s 
+   61  ansible web -i inventory -m apt -a "name=ntp state=present" -s 
+   62  ls
+   63  sl
+   64  ls
+   65  cat /etc/ansible/ansible.cfg 
+   66  cat /etc/ansible/ansible.cfg | grep -i inventory 
+   67  ls
+   68  vim ansible.cfg 
+   69  ls
+   70  cat ansible.cfg 
+   71  mv inventory host_av
+   72  ls
+   73  vim /etc/ansible/ansible.cfg 
+   74  ls
+   75  vim ansible.cfg 
+   76  ls
+   77  ansible web -m apt -a "name=ntp state=present" 
+   78  ansible web -m apt -a "name=ntp state=absent" 
+   79  cd ..
+   80  ls
+   81  history > Day4_History.txt 
