@@ -26,11 +26,11 @@ node {
     sh 'mvn package'
     }
     
-    stage('Archiva') {
+    stage('Archive Artifacts') {
      archive 'target/*.war'
     }
     
-    stage('Stage Deployment') {
+    stage('Deployment to Staging Env') {
      sh 'docker-compose up -d --build'
     }
     
