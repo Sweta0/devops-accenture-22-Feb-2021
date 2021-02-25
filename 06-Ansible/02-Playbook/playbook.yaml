@@ -2,7 +2,10 @@
 
 
 - hosts: web
-  become: yes 
+  become: yes
+  vars:
+    doc_root: "/var/www/html"
+    username: "Amit Vashist" 
   tasks: 
   - name: Install Apache2 Packages 
     apt: name=apache2 state=present 
@@ -11,8 +14,11 @@
     service: name=apache2 state=started 
 
   - name: Deploy Custom Index Page
-    copy: src=files/sample.html dest=/var/www/html/index.html
+    copy: src=files/sample.html dest={{doc_root}}/index.html
   
+  - name: Deploy Custom Info Page
+    template: src=templates/info.j2 dest={{doc_root}}/info.html
+
 
 - hosts: web 
   become: yes 
