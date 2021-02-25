@@ -1,0 +1,67 @@
+    1  ls
+    2  cd devops-accenture-22-Feb-2021/
+    3  ls
+    4  cd 04-Docker/
+    5  ls
+    6  cd ..
+    7  ls
+    8  mkdir 05-DockerCompose 
+    9  ls
+   10  history 
+   11  curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   12  chmod +x /usr/local/bin/docker-compose
+   13  docker-compose version 
+   14  ls
+   15  cd 05-DockerCompose/
+   16  ls
+   17  mkdir 01-Nginx-App
+   18  cd 01-Nginx-App/
+   19  ls
+   20  vim docker-compose.yaml
+   21  ls
+   22  docker ps 
+   23  docker ps -a 
+   24  ls
+   25  docker-compose up -d 
+   26  docker-compose ps 
+   27  ls
+   28  vim docker-compose.yaml 
+   29  docker-compose up -d 
+   30  docker-compose ps 
+   31  ls
+   32  cd ..
+   33  ls
+   34  cp -rf 01-Nginx-App 02-Petclinic-Deploy
+   35  ls
+   36  cd 02-Petclinic-Deploy/
+   37  ls
+   38  cp -rf ../../04-Docker/02-Dockerfile/petclinic/* . 
+   39  ls
+   40  cp -rf /root/.jenkins/workspace/Petclinic-Pipeline/03-App-Code/petclinic-code/target/petclinic.war . 
+   41  ls
+   42  ll
+   43  vim docker-compose.yaml 
+   44  ls
+   45  docker-compose up -d 
+   46  docker-compose ps 
+   47  docker ps 
+   48  cat docker-compose.yaml 
+   49  docker-compose ps 
+   50  cd ../01-Nginx-App/
+   51  docker-compose ps 
+   52  docker-compose kill 
+   53  docker-compose rm
+   54  docker-compose ps 
+   55  docker ps 
+   56  ls
+   57  cd ..
+   58  ls
+   59  cd 02-Petclinic-Deploy/
+   60  ls
+   61  docker-compose kill 
+   62  docker-compose rm
+   63  > petclinic.war 
+   64  ls
+   65  cd ..
+   66  ls
+   67  history > Docker-Compose-History.txt
