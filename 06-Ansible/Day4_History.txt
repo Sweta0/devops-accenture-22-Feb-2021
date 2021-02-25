@@ -79,3 +79,41 @@
    79  cd ..
    80  ls
    81  history > Day4_History.txt 
+   82  ls
+   83  git add . ; git commit -m "06-Ansible - Inventory"; git push 
+   84  ls
+   85  cd 01-Inventory/
+   86  ls
+   87  vim ansible.cfg 
+   88  ls
+   89  cd ..
+   90  ls
+   91  cp -rf 01-Inventory 02-Playbook 
+   92  ls
+   93  cd 02-Playbook/
+   94  ls
+   95  vim playbook.yaml
+   96  ls
+   97  ansible-playbook playbook.yaml 
+   98  ls
+   99  vim playbook.yaml 
+  100  ansible-doc service 
+  101  vim playbook.yaml 
+  102  ls
+  103  ansible-playbook playbook.yaml 
+  104  ls
+  105  mkdir files 
+  106  ls
+  107  vim files/sample.html
+  108  ls
+  109  cp -rf ../../04-Docker/02-Dockerfile/apache/sample.html files/
+  110  ls
+  111  vim files/sample.html 
+  112  ls
+  113  vim playbook.yaml 
+  114  ls
+  115  ansible-playbook playbook.yaml 
+  116  ls
+  117  cd ..
+  118  ls
+  119  history > Day4_History.txt 
