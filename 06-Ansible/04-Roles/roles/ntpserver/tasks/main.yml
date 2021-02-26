@@ -1,0 +1,6 @@
+---
+# tasks file for ntpserver
+
+- name: Install NTP Packages
+  apt: name=ntp state=present
+

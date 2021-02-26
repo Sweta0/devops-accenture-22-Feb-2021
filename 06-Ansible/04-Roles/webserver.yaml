@@ -1,0 +1,7 @@
+---
+- hosts: "172.31.0.102"
+  name: "Apache WebSever Deployment"
+  become: yes
+  roles:
+  - ntpserver
+  - webserver

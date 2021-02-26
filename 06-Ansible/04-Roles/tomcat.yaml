@@ -1,0 +1,7 @@
+---
+- hosts: web
+  name: "Tomcat Setup & Deployment"
+  become: yes
+  roles:
+  - firewall
+  - tomcat
