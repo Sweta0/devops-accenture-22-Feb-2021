@@ -35,7 +35,7 @@ node {
     }
     
     stage('Getting Ready for Ansible') {
-     sh "echo \'<h1> JENKINS TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>\` > ../../06-Ansible/04-Roles/roles/petclinic/files/jenkins.html"
+     sh "echo \'<h1> JENKINS TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>\' > ../../06-Ansible/04-Roles/roles/petclinic/files/jenkins.html"
      sh "cp -rf target/*.war ../../06-Ansible/04-Roles/roles/petclinic/files/"
     }
     
