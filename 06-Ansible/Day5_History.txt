@@ -294,3 +294,73 @@
   294  cd 06-Ansible/
   295  ls
   296  history  > Day5_History.txt
+  297  cd ..
+  298  ls
+  299  git add . ; git commit -m "06-Ansible - Roles"; git push 
+  300  ls
+  301  cd 06-Ansible/
+  302  ls
+  303  cd 04-Roles/
+  304  ls
+  305  cd roles/
+  306  ls
+  307  cd webserver/
+  308  ls
+  309  cd tests/
+  310  ls
+  311  cat test.yml 
+  312  cat inventory 
+  313  ls
+  314  ansible-playbook  test.yml 
+  315  ansible-playbook -i inventory test.yml 
+  316  ls
+  317  vim test.yml 
+  318  ansible-playbook -i inventory test.yml 
+  319  ls
+  320  cd ../
+  321  ls
+  322  cd ..
+  323  ls
+  324  cd ..
+  325  ls
+  326  echo  "Hello Ansible" > vault.txt
+  327  ls
+  328  cat vault.txt 
+  329  ansible-vault encrypt vault.txt 
+  330  ls
+  331  cat vault.txt 
+  332  ansible-vault view vault.txt 
+  333  ls
+  334  cd ..
+  335  ls
+  336  cd 04-Roles/
+  337  ls
+  338  cd roles/
+  339  ls
+  340  cp -rf tomcat petclinic
+  341  ls
+  342  vim petclinic/tasks/main.yml 
+  343  ls
+  344  cp -rf /root/.jenkins/workspace/Petclinic-Pipeline-as-code/03-App-Code/petclinic-code/target/petclinic.war petclinic/files/
+  345  ;s
+  346  ls
+  347  cd ..
+  348  ls
+  349  cp -rf webserver.yaml petclinic.yaml
+  350  ls
+  351  vim petclinic.yaml 
+  352  ls
+  353  ansible-playbook petclinic.yaml 
+  354  ls
+  355  ansible-playbook petclinic.yaml 
+  356  ls
+  357  vim petclinic.yaml 
+  358  ls
+  359  cd ..
+  360  git add . ; git commit -m "06-Ansible - Roles Petclinic"; git push 
+  361  ls
+  362  history 
+  363  ls
+  364  cd 06-Ansible/
+  365  ls
+  366  history > Day5_History.txt 
